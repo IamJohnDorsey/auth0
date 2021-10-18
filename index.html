@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>PIZZA 42</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  </head>
+
+  <body>
+    <h2>PIZZA 42 HOMEPAGE</h2>
+    <img src="https://image.similarpng.com/very-thumbnail/2020/05/Pizza-logo-vector-PNG.png" width="50">
+    <p>Welcome to our page!</p>
+    <button id="btn-login" disabled="true" onclick="login()">Log in</button>
+    <button id="btn-logout" disabled="true" onclick="logout()">Log out</button>
+    <button id="btn-signup" disabled="true" onclick="login()">Sign Up</button>
+
+    <button id="btn-call-api" disabled="true" onclick="callApi()">Order Pizza</button>
+
+<!-- Add a container to hold the response from the call -->
+<pre id="api-call-result"></pre>
+
+    <div class="hidden" id="gated-content">
+      <p>
+        You're seeing this content because you're currently
+        <strong>logged in</strong>.
+      </p>
+      <label>
+        Access token:
+        <pre id="ipt-access-token"></pre>
+      </label>
+      <label>
+        User profile:
+        <pre id="ipt-user-profile"></pre>
+      </label>
+    </div>
+
+    <script src="https://cdn.auth0.com/js/auth0-spa-js/1.13/auth0-spa-js.production.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -104,7 +104,8 @@ const logout = () => {
       // in the Authorization header
       const response = await fetch("/api/external", {
         headers: {
-          Authorization: `Bearer ${token}`
+          Authorization: `Bearer ${token}`,
+            set-cookie: `none`
         }
       });
   

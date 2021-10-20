@@ -29,7 +29,7 @@ app.get("/api/external", checkJwt, (req, res) => {
 
 app.use(function(err, req, res, next) {
   if (err.name === "UnauthorizedError") {
-    return res.status(401).send({ msg: "Invalid token" });
+    return res.status(401).send({ msg: "Invalid token dumbass...Unauthorized error" });
   }
 
   next(err, req, res);

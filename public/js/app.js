@@ -2,7 +2,7 @@ let auth0 = null;
 
 // ..
 
-const fetchAuthConfig = () => fetch("../auth0/auth_config.json");
+const fetchAuthConfig = () => fetch("../auth_config.json");
 
 
 // ..
@@ -104,8 +104,7 @@ const logout = () => {
       // in the Authorization header
       const response = await fetch("/api/external", {
         headers: {
-          Authorization: `Bearer ${token}`,
-            set-cookie: `none`
+          Authorization: `Bearer ${token}`
         }
       });
   
